@@ -11,6 +11,7 @@ on:
         description: Image to build and push
         options:
           - "6.06"
+          - "8.04"
 
 jobs:
   publish:
@@ -22,6 +23,9 @@ jobs:
           - image: "6.06"
             platforms: "linux/amd64,linux/386"
             tags: "6.06,dapper"
+          - image: "8.04"
+            platforms: "linux/amd64,linux/386"
+            tags: "8.04,hardy"
 
     steps:
       - name: Checkout repository
